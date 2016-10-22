@@ -70,7 +70,7 @@ OptionParser.new do |opts|
     @options.verbose = true
   end
 
-  opts.on('-a', "--ansible [ TYPE ]', 'type of repositories to fetch issues. either `role` or `project` default is #{ @options.type }", [ :role, :project ]) do |ansible|
+  opts.on('-a', '--ansible [ TYPE ]', "type of repositories to fetch issues. either `role` or `project` default is #{ @options.type }", [ :role, :project ]) do |ansible|
     @options.type = ansible
   end
 
