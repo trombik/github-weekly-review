@@ -11,7 +11,7 @@ def debug(text)
 
 end
 
-def crit(test)
+def crit(text)
 
   STDERR.puts text
   exit 1
