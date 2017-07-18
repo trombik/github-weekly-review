@@ -31,6 +31,7 @@ def compile_md
     issues.sort! { |a, b| b.number.to_i <=> a.number.to_i } # show newer issue first
     issues.each do |i|
       next if i.assignee
+      next if i.labels.map {|l| l.name }.include?("pending")
       mdfied_issues << "* [ ] issue %d: [%s](%s)" % [ i.number.to_i, i.title, i.html_url ]
     end
     if mdfied_issues.length > 0
